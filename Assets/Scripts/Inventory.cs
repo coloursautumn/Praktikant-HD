@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] public GridLayoutGroup inventoryGrid;
     public bool _selectobject;
     public InventoryItem _activeobject;
+    InventoryItem _targetobject;
 
 
     void Start()
@@ -28,13 +29,22 @@ public class Inventory : MonoBehaviour
     }
     public void HandleClick(InventoryItem _object)
     {
-        _selectobject = true;
-        _activeobject = _object;
-        print(_activeobject);
-        print(_object);
-
-
-
+        if (_selectobject == false)
+        {
+            {
+                _selectobject = true;
+                _activeobject = _object;
+            }
+        }
+       
+        else if (_selectobject == true)
+        {
+            _targetobject = _object;
+            _targetobject.Mix(_activeobject);
+            _selectobject = false;
+            _activeobject = null;
+            _targetobject = null;
+        }
     }
 
 

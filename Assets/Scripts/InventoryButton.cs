@@ -8,11 +8,14 @@ public class InventoryButton : MonoBehaviour
 {
     public Transform _activepanel;
     private Canvas canvas;
+    private Inventory _inventory;
+
     // Start is called before the first frame update
     void Start()
     {
         canvas = GetComponentInParent<Canvas> (); //Получение компонента Canvas
         canvas.enabled = false; //Отключение инвентаря при старте
+        _inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
     }
 
     // Update is called once per frame

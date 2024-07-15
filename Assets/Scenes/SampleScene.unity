@@ -1430,11 +1430,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3431291037399816705, guid: da6aa56c219bf3c43883a3a0342fa24d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.32
+      value: -8.33
       objectReference: {fileID: 0}
     - target: {fileID: 3431291037399816705, guid: da6aa56c219bf3c43883a3a0342fa24d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3431291037399816705, guid: da6aa56c219bf3c43883a3a0342fa24d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2629,11 +2629,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8024729509424240011, guid: 858a1a725e6c122479a8baf23ab01795, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.39
+      value: -10.09
       objectReference: {fileID: 0}
     - target: {fileID: 8024729509424240011, guid: 858a1a725e6c122479a8baf23ab01795, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.34
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8024729509424240011, guid: 858a1a725e6c122479a8baf23ab01795, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3044,7 +3044,7 @@ GameObject:
   - component: {fileID: 1148596837}
   m_Layer: 5
   m_Name: InventoryCanvas
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3149,6 +3149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items: []
   inventoryGrid: {fileID: 834514253}
+  _selectobject: 0
+  _activeobject: {fileID: 0}
 --- !u!114 &1148596836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4231,7 +4233,7 @@ Transform:
   m_GameObject: {fileID: 1501739108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.36, y: -3.39, z: 0}
+  m_LocalPosition: {x: -7.74, y: -1.46, z: 0}
   m_LocalScale: {x: 0.2441, y: 0.2723, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

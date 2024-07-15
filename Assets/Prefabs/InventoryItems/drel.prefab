@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 599675579414392912}
         m_TargetAssemblyTypeName: InventoryItem, Assembly-CSharp
-        m_MethodName: PrintName
+        m_MethodName: PassToInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -147,6 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ItemName: "\u0414\u0440\u0435\u043B\u044C"
+  _recipes:
+    _serializedList: []
 --- !u!1 &4437135359756957196
 GameObject:
   m_ObjectHideFlags: 0

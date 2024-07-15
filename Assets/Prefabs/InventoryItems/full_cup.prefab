@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 599675579414392912}
         m_TargetAssemblyTypeName: InventoryItem, Assembly-CSharp
-        m_MethodName: PrintName
+        m_MethodName: PassToInventory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
