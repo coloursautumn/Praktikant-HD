@@ -11,8 +11,8 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        canvas = GetComponent<Canvas>(); //Получение компонента Canvas
-        canvas.enabled = false; //Отключение инвентаря при старте
+        //canvas = GetComponent<Canvas>(); //Получение компонента Canvas
+        //canvas.enabled = false; //Отключение инвентаря при старте
     }
 
     void Update()
