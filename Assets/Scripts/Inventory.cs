@@ -8,6 +8,9 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> Items = new List<InventoryItem>();
     private Canvas canvas;
     [SerializeField] public GridLayoutGroup inventoryGrid;
+    public bool _selectobject;
+    public InventoryItem _activeobject;
+
 
     void Start()
     {
@@ -23,5 +26,18 @@ public class Inventory : MonoBehaviour
 
         }
     }
-    
+    public void HandleClick(InventoryItem _object)
+    {
+        _selectobject = true;
+        _activeobject = _object;
+        print(_activeobject);
+        print(_object);
+
+
+
+    }
+
+
+
+
 }

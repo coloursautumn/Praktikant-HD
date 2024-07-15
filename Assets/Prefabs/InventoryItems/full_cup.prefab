@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4072624295670253918}
   - component: {fileID: 599675579414392912}
   m_Layer: 5
-  m_Name: "\u0427\u0435\u0440\u0435\u043F\u0438\u0446\u0430"
+  m_Name: full_cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 43a483e6982a3bf4db4a992481b66a62, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02f441df9b70a0e45a6b84ec7d155e69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,7 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9eea8ea95ac684783625b11c087aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ItemName: "\u0447\u0435\u0440\u0435\u043F\u0438\u0446\u0430"
+  _ItemName: "\u043A\u0440\u0443\u0436\u043A\u0430 \u0441 \u0447\u0430\u0435\u043C"
+  _recipes:
+    _serializedList: []
 --- !u!1 &4437135359756957196
 GameObject:
   m_ObjectHideFlags: 0

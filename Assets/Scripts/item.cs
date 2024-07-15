@@ -6,6 +6,7 @@ using static UnityEditor.Progress;
 
 public class item : MonoBehaviour
 {
-    [SerializeField] public string name;
+    [SerializeField] public string itemName;
     [SerializeField] public InventoryItem inventoryItem;
+
 }
