@@ -37,10 +37,10 @@ public class PlayerPickUpItem : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (_activeObject != null || collision.GetComponent<item>() != null)
+        if (_activeObject == collision.GetComponent<item>())
         {
             _activeObject = null;
-            print("Вы ничего не подобрали");
+            //print("Вы ничего не подобрали");
         }
     }
 

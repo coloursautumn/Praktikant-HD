@@ -10,15 +10,19 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveVector;
     private bool _ladder;
     private UnityEvent<GameObject> _actionObject;
+    private Animator _animation;
+
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        _animation = GetComponent<Animator> ();
     }
 
     void Update()
     {
         moveVector.x = Input.GetAxis("Horizontal");
+
 
         if (_ladder)
         {
@@ -28,10 +32,24 @@ public class PlayerMovement : MonoBehaviour
         else 
         {
             moveVector.y = 0;
-            rb.gravityScale = 2;
+            rb.gravityScale = 10;
         }
 
+        if (moveVector.x < 0)
+        {
+            transform.localScale = new Vector3(-0.5f, transform.localScale.y, transform.localScale.z);
+
+        }
+        else if (moveVector.x > 0)
+        {
+            transform.localScale = new Vector3(0.5f, transform.localScale.y, transform.localScale.z);
+        }
         rb.MovePosition(rb.position + moveVector * speed);
+        if (moveVector.x != 0 || moveVector.y !=0) 
+        {
+            _animation.SetBool("walking", true);
+        }
+        else _animation.SetBool("walking", false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,8 +63,10 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _ladder = false;
-
+        if (collision.CompareTag("Stairs"))
+        {
+            _ladder = false;
+        }
     }
 
 
