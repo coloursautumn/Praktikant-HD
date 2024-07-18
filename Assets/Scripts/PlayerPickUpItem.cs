@@ -9,6 +9,7 @@ public class PlayerPickUpItem : MonoBehaviour
     //private PlayerPickUpItem InventoryItem;
 
     private item _activeObject;
+    public NPC _activeNPC;
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<item>() != null)
@@ -16,6 +17,10 @@ public class PlayerPickUpItem : MonoBehaviour
             _activeObject = collision.GetComponent<item>();
             print("Нажмите E/ЛКМ чтобы подобрать " + _activeObject.itemName);
 
+        }
+        if (collision.GetComponent<NPC>() != null)
+        {
+            _activeNPC = collision.GetComponent<NPC>();
         }
     }
     public void Update()
@@ -41,6 +46,10 @@ public class PlayerPickUpItem : MonoBehaviour
         {
             _activeObject = null;
             //print("Вы ничего не подобрали");
+        }
+        if (collision.GetComponent<NPC>() != null && collision.GetComponent<NPC>() == _activeNPC)
+        {
+            _activeNPC = null;
         }
     }
 

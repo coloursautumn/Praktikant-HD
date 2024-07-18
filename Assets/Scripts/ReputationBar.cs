@@ -32,4 +32,14 @@ public class ReputationBar : MonoBehaviour
 
         _reputationBar.fillAmount = _reputation / _maxreputation;
     }
+
+    public void AddReputation (float rep)
+    {
+        _reputation += rep;
+    }
+
+    public void SubtractReputation(float rep)
+    {
+        _reputation -= rep;
+    }
 }

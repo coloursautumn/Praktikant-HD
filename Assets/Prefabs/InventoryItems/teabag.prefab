@@ -150,7 +150,7 @@ MonoBehaviour:
   _recipes:
     _serializedList:
     - Key: "\u043A\u0440\u0443\u0436\u043A\u0430 \u0441 \u0432\u043E\u0434\u043E\u0439"
-      Value: {fileID: 599675579414392912, guid: c63e2d139d5dbc64ab2dd3ba93c9c2aa, type: 3}
+      Value: {fileID: 599675579414392912, guid: 2d22997832fc59d4ba868f504afb2481, type: 3}
 --- !u!1 &4437135359756957196
 GameObject:
   m_ObjectHideFlags: 0

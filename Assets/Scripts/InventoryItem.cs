@@ -4,12 +4,15 @@ using AYellowpaper.SerializedCollections;
 //using System.IO.Pipes;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 //using UnityEngine.Rendering;
 using static AYellowpaper.SerializedCollections.SerializedDictionarySample;
 
-public class InventoryItem : MonoBehaviour
+public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public string _ItemName;
+    Tooltip _tooltip;
     [SerializedDictionary("Исходник", "Результат")]
     public SerializedDictionary<string, InventoryItem> _recipes;// = new SerializedDictionary<string, InventoryItem>();
     private Inventory _inventory;
@@ -17,6 +20,7 @@ public class InventoryItem : MonoBehaviour
     private void Start()
     {
         _inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+        _tooltip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<Tooltip>();
     }
 
     public void PrintName()
@@ -48,13 +52,30 @@ public class InventoryItem : MonoBehaviour
         // Если это производная от контейнера, её уничтожаем и создаём пустой контейнер (кржуку, ведро, и т. п.) 
     }
 
-    //public void Give(Npc target)
-    //{
-           // Передаём предмет NPC и пусть он разбирается, что с ним делать.
-    //}
+    public void Give(NPC target)
+    {
+        //Передаём предмет NPC и пусть он разбирается, что с ним делать.
+        //print("Пытаемся передать персонажу " + target + " предмет " + _ItemName);
+        target.TurnInQuest(this);
+    }
 
     public void PassToInventory()
     {
         _inventory.HandleClick(this);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        _tooltip.enabled = true;
+        _tooltip.ChangeText(_ItemName);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        _tooltip.enabled = false;
+    }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+
     }
 }

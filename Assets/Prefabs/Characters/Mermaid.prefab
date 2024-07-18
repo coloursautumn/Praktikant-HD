@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &287039076964831299
+--- !u!1 &3182941742259087780
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8024729509424240011}
-  - component: {fileID: 1067841948445118985}
-  - component: {fileID: 3354228494694099612}
-  - component: {fileID: 7064581352310107229}
+  - component: {fileID: 8219032908262374349}
+  - component: {fileID: 8249699001886119658}
+  - component: {fileID: 262670220311123334}
+  - component: {fileID: 7085211463185471151}
   m_Layer: 0
-  m_Name: tea
+  m_Name: Mermaid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8024729509424240011
+--- !u!4 &8219032908262374349
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287039076964831299}
+  m_GameObject: {fileID: 3182941742259087780}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.29, y: -2.2010534, z: -0.08005368}
-  m_LocalScale: {x: 0.075421065, y: 0.075421065, z: 0.075421065}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.42, y: -2.56, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1067841948445118985
+--- !u!212 &8249699001886119658
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287039076964831299}
+  m_GameObject: {fileID: 3182941742259087780}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,10 +72,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: 31bfffacc00cae341839a1a68d7ea89f, type: 3}
+  m_SortingLayerID: 552718449
+  m_SortingLayer: 1
+  m_SortingOrder: -20
+  m_Sprite: {fileID: 21300000, guid: 882e995c11ce2854fb5e76a41637919d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,13 +86,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3354228494694099612
+--- !u!114 &262670220311123334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3182941742259087780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ec924cce20a2e4ab725594f270e0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _missions:
+  - {fileID: -6593723595208230370, guid: eccbc80e3dcde4447ac7b2b603e0b8f0, type: 3}
+  - {fileID: -6593723595208230370, guid: 29cf15f289b83a4449ab21655e518e85, type: 3}
+  GridQuest: {fileID: 0}
+--- !u!61 &7085211463185471151
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287039076964831299}
+  m_GameObject: {fileID: 3182941742259087780}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -118,30 +134,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.1549008}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 5.12, y: 7.4298015}
   m_EdgeRadius: 0
---- !u!114 &7064581352310107229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287039076964831299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc59b5f850a815f4aa29962926fe013a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: "\u0427\u0430\u0439\u043D\u044B\u0439 \u043F\u0430\u043A\u0435\u0442\u0438\u043A"
-  inventoryItem: {fileID: 599675579414392912, guid: 48c0558aeca79b344af14e15889697a6, type: 3}

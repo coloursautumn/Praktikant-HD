@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Stairs
   - Inventory
+  - ReputationBar
+  - Tooltip
   layers:
   - Default
   - TransparentFX

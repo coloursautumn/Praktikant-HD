@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +10,7 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> Items = new List<InventoryItem>();
     private Canvas canvas;
     [SerializeField] public GridLayoutGroup inventoryGrid;
+    [SerializeField] private PlayerPickUpItem playerCollisions;
     public bool _selectobject;
     public InventoryItem _activeobject;
     InventoryItem _targetobject;
@@ -47,7 +50,22 @@ public class Inventory : MonoBehaviour
         }
     }
 
-
-
+    public void GiveItem()
+    {
+        if (_selectobject == true && playerCollisions._activeNPC != null)
+        {
+            _activeobject.Give(playerCollisions._activeNPC);
+            _activeobject= null;
+            _selectobject= false;
+        }
+        else if (!_selectobject)
+        {
+            print("Без выбранного предмета эта кнопка не работает!");
+        }
+        else
+        {
+            print("Отдавать некому!");
+        }
+    }
 
 }
