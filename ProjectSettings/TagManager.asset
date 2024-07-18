@@ -8,6 +8,7 @@ TagManager:
   - Inventory
   - ReputationBar
   - Tooltip
+  - TasksPanel
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Dialogues
+    uniqueID: 2910921709
     locked: 0
   - name: Person
     uniqueID: 552718449

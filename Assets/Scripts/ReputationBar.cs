@@ -8,6 +8,7 @@ public class ReputationBar : MonoBehaviour
 {
     public float _reputation;
     public float _maxreputation = 100;
+    [SerializeField] Image _gameOverScreen;
 
     Image _reputationBar;
     // Start is called before the first frame update
@@ -23,13 +24,8 @@ public class ReputationBar : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            _reputation -= 5;
+            SubtractReputation(100f);
         }
-        else if (Input.GetKeyDown(KeyCode.X))
-        {
-            _reputation += 5;
-        }
-
         _reputationBar.fillAmount = _reputation / _maxreputation;
     }
 
@@ -41,5 +37,10 @@ public class ReputationBar : MonoBehaviour
     public void SubtractReputation(float rep)
     {
         _reputation -= rep;
+        if (_reputation <= 0)
+        {
+            _gameOverScreen.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 }

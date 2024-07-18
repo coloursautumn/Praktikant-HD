@@ -9,7 +9,7 @@ using UnityEngine.UI;
 //using UnityEngine.Rendering;
 using static AYellowpaper.SerializedCollections.SerializedDictionarySample;
 
-public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class InventoryItem : MonoBehaviour//, IPointerEnterHandler, IPointerExitHandler
 {
     public string _ItemName;
     Tooltip _tooltip;
@@ -20,7 +20,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     private void Start()
     {
         _inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
-        _tooltip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<Tooltip>();
+        //_tooltip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<Tooltip>();
     }
 
     public void PrintName()
@@ -64,18 +64,18 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         _inventory.HandleClick(this);
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        _tooltip.enabled = true;
-        _tooltip.ChangeText(_ItemName);
-    }
+    //public void OnPointerEnter(PointerEventData eventData)
+    //{
+    //    _tooltip.enabled = true;
+    //    _tooltip.ChangeText(_ItemName);
+    //}
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        _tooltip.enabled = false;
-    }
-    public void OnPointerDown(PointerEventData eventData)
-    {
+    //public void OnPointerExit(PointerEventData eventData)
+    //{
+    //    _tooltip.enabled = false;
+    //}
+    //public void OnPointerDown(PointerEventData eventData)
+    //{
 
-    }
+    //}
 }
