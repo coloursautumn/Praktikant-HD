@@ -18,7 +18,7 @@ public class NPC : MonoBehaviour
     void Start()
     {
         _reputation = GameObject.FindGameObjectWithTag("ReputationBar").GetComponent<ReputationBar>();
-        GridQuest = GameObject.FindGameObjectWithTag("TasksPanel").GetComponent<GridLayoutGroup>();
+        //GridQuest = GameObject.FindGameObjectWithTag("TasksPanel").GetComponent<GridLayoutGroup>();
     }
 
     private void Awake()
@@ -32,7 +32,7 @@ public class NPC : MonoBehaviour
 
     public void GiveQuest()
     {
-        if (_missions.Count > 0)
+        if (_missions.Count > 0 && _activeQuest == null)
         {
             _activeQuest = Instantiate(_missions[0].gameObject, GridQuest.gameObject.transform).GetComponent<Missions>();
             _dialogueWindow.SetActive(true);
@@ -55,6 +55,7 @@ public class NPC : MonoBehaviour
             _activeQuest = null;
             // ”ничтожить предмет из инвентар€
             Destroy(item.gameObject);
+            GameManager.instance.FinishQuest();
         }
         else
         {

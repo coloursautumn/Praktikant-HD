@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _missions:
   - {fileID: -6593723595208230370, guid: eccbc80e3dcde4447ac7b2b603e0b8f0, type: 3}
+  - {fileID: -6593723595208230370, guid: 7d4d646b63f1d6448889e4bb4db331a2, type: 3}
+  - {fileID: -6593723595208230370, guid: 8979bea1aa822a4429c3d0c89481d381, type: 3}
   GridQuest: {fileID: 0}
   _reputation: {fileID: 0}
   _dialogueWindow: {fileID: 8754063608513421857}

@@ -52,3 +52,6 @@ TagManager:
   - name: Person
     uniqueID: 552718449
     locked: 0
+  - name: Items
+    uniqueID: 3891755469
+    locked: 0
